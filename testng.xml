@@ -3,9 +3,11 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="PESMCOE.PublicationScreenShot.TakeScreenShot"/>
+      <!-- class name="PESMCOE.PublicationScreenShot.TakeScreenShot"/>
       <class name="PESMCOE.publication.config.BaseTest"/>
-      <class name="PESMCOE.publication.keywords.UIKeywords"/>
+      <class name="PESMCOE.publication.keywords.UIKeywords"/-->
+      <class name="PESMCOE.PublicationScreenShot.PdfDataProvider"/>
+      <class name="PESMCOE.PublicationScreenShot.PdfScreenShot"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
