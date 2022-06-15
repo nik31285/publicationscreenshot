@@ -14,15 +14,18 @@ import org.testng.annotations.Test;
 public class PdfDataProvider {
 	@DataProvider(name = "pdfpathprovider")
 	public Object[][] pdfPath() throws IOException {
-		Object [][]path=new Object[330][2];
-		FileInputStream is=new FileInputStream("F:\\Paper_Publication_PDF\\PaperPDF\\pdf_data_provider.xlsx");
+		Object [][]path=new Object[361][2];
+		FileInputStream is=new FileInputStream("D:\\1_NAAC Criteria III\\DVV WORK\\PDF all papers\\link.xlsx");
 		XSSFWorkbook book=new XSSFWorkbook(is);
 		XSSFSheet sheet=book.getSheetAt(0);
 		for (int i = 0; i < path.length; i++) {
 			XSSFRow row=sheet.getRow(i);
 			for(int j=0;j<=1;j++) {
 				XSSFCell cell=row.getCell(j);
+				if(j==0)
 				path[i][j]=cell.getStringCellValue();
+				else
+					path[i][j]=String.valueOf((int)cell.getNumericCellValue());
 			}
 			
 		//	System.out.println(path[i]);

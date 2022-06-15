@@ -14,7 +14,7 @@ public class PdfScreenShot {
 	        // Existing PDF Document
 	        // to be Loaded using file io
 	        File newFile
-	            = new File("F:\\Paper_Publication_PDF\\PaperPDF\\"+path);
+	            = new File("D:\\1_NAAC Criteria III\\DVV WORK\\PDF all papers\\"+path);
 	        PDDocument pdfDocument = PDDocument.load(newFile);
 	  
 	        // PDFRenderer class to be Instantiated
@@ -24,15 +24,13 @@ public class PdfScreenShot {
 	        // Rendering an image
 	        // from the PDF document
 	        // using BufferedImage class
+	        
 	        BufferedImage img = pdfRenderer.renderImage(0);
 	        // Writing the extracted
 	        // image to a new file
 	        ImageIO.write(
 	            img, "JPEG",
-	            new File("F:\\Paper_Publication_PDF\\PaperPDF\\Image\\"+num+".jpeg"));
-	        System.out.println(
-	            "Image has been extracted successfully");
-	  
+	            new File("D:\\1_NAAC Criteria III\\DVV WORK\\PDF all papers\\Images\\"+num+".jpeg"));
 	        // Closing the PDF document
 	        pdfDocument.close();
 	    }
